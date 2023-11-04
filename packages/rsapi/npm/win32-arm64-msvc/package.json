@@ -4,16 +4,16 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.0",
+  "version": "0.0.1",
   "os": [
     "win32"
   ],
   "cpu": [
-    "x64"
+    "arm64"
   ],
-  "main": "rsapi.win32-x64-msvc.node",
+  "main": "rsapi.win32-arm64-msvc.node",
   "files": [
-    "rsapi.win32-x64-msvc.node"
+    "rsapi.win32-arm64-msvc.node"
   ],
   "license": "MIT",
   "engines": {

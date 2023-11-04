@@ -1,5 +1,5 @@
 {
-  "name": "@logseq/rsapi-darwin-x64",
+  "name": "@stonetoast/rsapi-darwin-x64",
   "private": false,
   "publishConfig": {
     "access": "public"

@@ -19,4 +19,4 @@ freebsd-x64-gnu
 
 ## How to Build
 
-TODO
+Mostly just use the GitHub Actions

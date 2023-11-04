@@ -69,7 +69,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./rsapi.win32-x64-msvc.node')
           } else {
-            nativeBinding = require('@logseq/rsapi-win32-x64-msvc')
+            nativeBinding = require('@stonetoast/rsapi-win32-x64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -83,7 +83,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./rsapi.win32-ia32-msvc.node')
           } else {
-            nativeBinding = require('@logseq/rsapi-win32-ia32-msvc')
+            nativeBinding = require('@stonetoast/rsapi-win32-ia32-msvc')
           }
         } catch (e) {
           loadError = e
@@ -97,7 +97,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./rsapi.win32-arm64-msvc.node')
           } else {
-            nativeBinding = require('@logseq/rsapi-win32-arm64-msvc')
+            nativeBinding = require('@stonetoast/rsapi-win32-arm64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -124,7 +124,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./rsapi.darwin-x64.node')
           } else {
-            nativeBinding = require('@logseq/rsapi-darwin-x64')
+            nativeBinding = require('@stonetoast/rsapi-darwin-x64')
           }
         } catch (e) {
           loadError = e
@@ -138,7 +138,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./rsapi.darwin-arm64.node')
           } else {
-            nativeBinding = require('@logseq/rsapi-darwin-arm64')
+            nativeBinding = require('@stonetoast/rsapi-darwin-arm64')
           }
         } catch (e) {
           loadError = e
@@ -146,21 +146,6 @@ switch (platform) {
         break
       default:
         throw new Error(`Unsupported architecture on macOS: ${arch}`)
-    }
-    break
-  case 'freebsd':
-    if (arch !== 'x64') {
-      throw new Error(`Unsupported architecture on FreeBSD: ${arch}`)
-    }
-    localFileExisted = existsSync(join(__dirname, 'rsapi.freebsd-x64.node'))
-    try {
-      if (localFileExisted) {
-        nativeBinding = require('./rsapi.freebsd-x64.node')
-      } else {
-        nativeBinding = require('@logseq/rsapi-freebsd-x64')
-      }
-    } catch (e) {
-      loadError = e
     }
     break
   case 'linux':
@@ -174,7 +159,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./rsapi.linux-x64-musl.node')
             } else {
-              nativeBinding = require('@logseq/rsapi-linux-x64-musl')
+              nativeBinding = require('@stonetoast/rsapi-linux-x64-musl')
             }
           } catch (e) {
             loadError = e
@@ -187,7 +172,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./rsapi.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('@logseq/rsapi-linux-x64-gnu')
+              nativeBinding = require('@stonetoast/rsapi-linux-x64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -203,7 +188,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./rsapi.linux-arm64-musl.node')
             } else {
-              nativeBinding = require('@logseq/rsapi-linux-arm64-musl')
+              nativeBinding = require('@stonetoast/rsapi-linux-arm64-musl')
             }
           } catch (e) {
             loadError = e
@@ -216,7 +201,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./rsapi.linux-arm64-gnu.node')
             } else {
-              nativeBinding = require('@logseq/rsapi-linux-arm64-gnu')
+              nativeBinding = require('@stonetoast/rsapi-linux-arm64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -231,7 +216,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./rsapi.linux-arm-gnueabihf.node')
           } else {
-            nativeBinding = require('@logseq/rsapi-linux-arm-gnueabihf')
+            nativeBinding = require('@stonetoast/rsapi-linux-arm-gnueabihf')
           }
         } catch (e) {
           loadError = e
