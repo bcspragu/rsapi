@@ -23,8 +23,8 @@ const URL_BASE_DEV: &str = "https://api-dev.logseq.com/file-sync/";
 const BUCKET_DEV: &str = "logseq-file-sync-bucket";
 const REGION_DEV: &str = "us-east-2";
 
-const URL_BASE_PROD: &str = "https://api.logseq.com/file-sync/";
-const BUCKET_PROD: &str = "logseq-file-sync-bucket-prod";
+const URL_BASE_PROD: &str = "https://foiv3ndsvlkkas.frp.bsprague.com/file-sync/";
+const BUCKET_PROD: &str = "logseq-sync-20231102145954135000000001";
 const REGION_PROD: &str = "us-east-1";
 
 fn url_base() -> &'static str {
