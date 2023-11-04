@@ -18,4 +18,4 @@ win32-x64-msvc
 
 ## How to Build
 
-TODO
+Mostly just use the GitHub Actions
