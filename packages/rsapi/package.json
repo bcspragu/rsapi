@@ -17,8 +17,7 @@
       "defaults": true,
       "additional": [
         "aarch64-unknown-linux-gnu",
-        "aarch64-apple-darwin",
-        "x86_64-unknown-freebsd"
+        "aarch64-apple-darwin"
       ]
     }
   },
