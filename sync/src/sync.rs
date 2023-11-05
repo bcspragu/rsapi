@@ -25,7 +25,7 @@ const REGION_DEV: &str = "us-east-2";
 
 const URL_BASE_PROD: &str = "https://foiv3ndsvlkkas.frp.bsprague.com/file-sync/";
 const BUCKET_PROD: &str = "logseq-sync-20231102145954135000000001";
-const REGION_PROD: &str = "us-east-1";
+const REGION_PROD: &str = "us-west-2";
 
 fn url_base() -> &'static str {
     unsafe { URL_BASE }
