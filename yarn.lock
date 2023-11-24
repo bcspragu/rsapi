@@ -260,14 +260,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@logseq/rsapi@workspace:packages/rsapi":
-  version: 0.0.0-use.local
-  resolution: "@logseq/rsapi@workspace:packages/rsapi"
-  dependencies:
-    "@napi-rs/cli": "npm:2.16.5"
-  languageName: unknown
-  linkType: soft
-
 "@napi-rs/cli@npm:2.16.5":
   version: 2.16.5
   resolution: "@napi-rs/cli@npm:2.16.5"
@@ -738,6 +730,14 @@ __metadata:
   checksum: ef6351ae073c45c2ac89494dbb3e1f87cc60a93ce4cde797b782812b6f97da0d620ae81973f104b43c9b7eaa789ad20ba4f6a1359f1cc62f63729a55a7d22d4e
   languageName: node
   linkType: hard
+
+"@stonetoast/rsapi@workspace:packages/rsapi":
+  version: 0.0.0-use.local
+  resolution: "@stonetoast/rsapi@workspace:packages/rsapi"
+  dependencies:
+    "@napi-rs/cli": "npm:2.16.5"
+  languageName: unknown
+  linkType: soft
 
 "@swc-node/core@npm:^1.10.6":
   version: 1.10.6

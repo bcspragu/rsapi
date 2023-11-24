@@ -1,6 +1,5 @@
 {
   "name": "@stonetoast/rsapi",
-  "private": false,
   "publishConfig": {
     "access": "public"
   },
