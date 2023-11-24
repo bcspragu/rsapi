@@ -37,7 +37,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./rsapi.android-arm64.node')
           } else {
-            nativeBinding = require('@logseq/rsapi-android-arm64')
+            nativeBinding = require('@stonetoast/rsapi-android-arm64')
           }
         } catch (e) {
           loadError = e
@@ -49,7 +49,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./rsapi.android-arm-eabi.node')
           } else {
-            nativeBinding = require('@logseq/rsapi-android-arm-eabi')
+            nativeBinding = require('@stonetoast/rsapi-android-arm-eabi')
           }
         } catch (e) {
           loadError = e
@@ -113,7 +113,7 @@ switch (platform) {
       if (localFileExisted) {
         nativeBinding = require('./rsapi.darwin-universal.node')
       } else {
-        nativeBinding = require('@logseq/rsapi-darwin-universal')
+        nativeBinding = require('@stonetoast/rsapi-darwin-universal')
       }
       break
     } catch {}
