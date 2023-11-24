@@ -22,12 +22,12 @@
     }
   },
   "optionalDependencies": {
-    "@stonetoast/rsapi-win32-x64-msvc": "0.0.78",
-    "@stonetoast/rsapi-darwin-x64": "0.0.78",
-    "@stonetoast/rsapi-linux-x64-gnu": "0.0.78",
-    "@stonetoast/rsapi-linux-arm64-gnu": "0.0.78",
     "@stonetoast/rsapi-darwin-arm64": "0.0.78",
-    "@stonetoast/rsapi-freebsd-x64": "0.0.78"
+    "@stonetoast/rsapi-darwin-x64": "0.0.78",
+    "@stonetoast/rsapi-freebsd-x64": "0.0.78",
+    "@stonetoast/rsapi-linux-arm64-gnu": "0.0.78",
+    "@stonetoast/rsapi-linux-x64-gnu": "0.0.78",
+    "@stonetoast/rsapi-win32-x64-msvc": "0.0.78"
   },
   "license": "MIT",
   "devDependencies": {

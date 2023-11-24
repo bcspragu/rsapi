@@ -731,11 +731,72 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stonetoast/rsapi-darwin-arm64@npm:0.0.78":
+  version: 0.0.78
+  resolution: "@stonetoast/rsapi-darwin-arm64@npm:0.0.78"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@stonetoast/rsapi-darwin-x64@npm:0.0.78":
+  version: 0.0.78
+  resolution: "@stonetoast/rsapi-darwin-x64@npm:0.0.78"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@stonetoast/rsapi-freebsd-x64@npm:0.0.78":
+  version: 0.0.78
+  resolution: "@stonetoast/rsapi-freebsd-x64@npm:0.0.78"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@stonetoast/rsapi-linux-arm64-gnu@npm:0.0.78":
+  version: 0.0.78
+  resolution: "@stonetoast/rsapi-linux-arm64-gnu@npm:0.0.78"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@stonetoast/rsapi-linux-x64-gnu@npm:0.0.78":
+  version: 0.0.78
+  resolution: "@stonetoast/rsapi-linux-x64-gnu@npm:0.0.78"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@stonetoast/rsapi-win32-x64-msvc@npm:0.0.78":
+  version: 0.0.78
+  resolution: "@stonetoast/rsapi-win32-x64-msvc@npm:0.0.78"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@stonetoast/rsapi@workspace:packages/rsapi":
   version: 0.0.0-use.local
   resolution: "@stonetoast/rsapi@workspace:packages/rsapi"
   dependencies:
     "@napi-rs/cli": "npm:2.16.5"
+    "@stonetoast/rsapi-darwin-arm64": "npm:0.0.78"
+    "@stonetoast/rsapi-darwin-x64": "npm:0.0.78"
+    "@stonetoast/rsapi-freebsd-x64": "npm:0.0.78"
+    "@stonetoast/rsapi-linux-arm64-gnu": "npm:0.0.78"
+    "@stonetoast/rsapi-linux-x64-gnu": "npm:0.0.78"
+    "@stonetoast/rsapi-win32-x64-msvc": "npm:0.0.78"
+  dependenciesMeta:
+    "@stonetoast/rsapi-darwin-arm64":
+      optional: true
+    "@stonetoast/rsapi-darwin-x64":
+      optional: true
+    "@stonetoast/rsapi-freebsd-x64":
+      optional: true
+    "@stonetoast/rsapi-linux-arm64-gnu":
+      optional: true
+    "@stonetoast/rsapi-linux-x64-gnu":
+      optional: true
+    "@stonetoast/rsapi-win32-x64-msvc":
+      optional: true
   languageName: unknown
   linkType: soft
 
