@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.78",
+  "version": "0.0.79",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
@@ -20,6 +20,14 @@
         "x86_64-unknown-freebsd"
       ]
     }
+  },
+  "optionalDependencies": {
+    "@logseq/rsapi-win32-x64-msvc": "0.0.78",
+    "@logseq/rsapi-darwin-x64": "0.0.78",
+    "@logseq/rsapi-linux-x64-gnu": "0.0.78",
+    "@logseq/rsapi-linux-arm64-gnu": "0.0.78",
+    "@logseq/rsapi-darwin-arm64": "0.0.78",
+    "@logseq/rsapi-freebsd-x64": "0.0.78"
   },
   "license": "MIT",
   "devDependencies": {
