@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.79",
+  "version": "0.0.80",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
@@ -22,12 +22,12 @@
     }
   },
   "optionalDependencies": {
-    "@stonetoast/rsapi-darwin-arm64": "0.0.78",
-    "@stonetoast/rsapi-darwin-x64": "0.0.78",
-    "@stonetoast/rsapi-freebsd-x64": "0.0.78",
-    "@stonetoast/rsapi-linux-arm64-gnu": "0.0.78",
-    "@stonetoast/rsapi-linux-x64-gnu": "0.0.78",
-    "@stonetoast/rsapi-win32-x64-msvc": "0.0.78"
+    "@stonetoast/rsapi-darwin-arm64": "0.0.79",
+    "@stonetoast/rsapi-darwin-x64": "0.0.79",
+    "@stonetoast/rsapi-freebsd-x64": "0.0.79",
+    "@stonetoast/rsapi-linux-arm64-gnu": "0.0.79",
+    "@stonetoast/rsapi-linux-x64-gnu": "0.0.79",
+    "@stonetoast/rsapi-win32-x64-msvc": "0.0.79"
   },
   "license": "MIT",
   "devDependencies": {

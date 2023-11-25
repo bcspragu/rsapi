@@ -35,6 +35,7 @@ fn bucket() -> &'static str {
     unsafe { BUCKET }
 }
 
+#[allow(dead_code)]
 fn region() -> &'static str {
     unsafe { REGION }
 }
@@ -390,24 +391,40 @@ impl SyncClient {
     where
         F: Fn(usize, usize) + Send + Sync + 'static,
     {
-        use s3_presign::Bucket;
-        use s3_presign::Credentials;
+        // use s3_presign::Bucket;
+        // use s3_presign::Credentials;
+
+        use s3::bucket::Bucket;
+        use s3::creds::Credentials;
 
         let credentials = self.credentials.as_ref().unwrap();
-
         let credentials = Credentials::new(
-            credentials.access_key_id.clone(),
-            credentials.secret_key.clone(),
-            Some(credentials.session_token.clone()),
-        );
-        let bucket = Bucket::new(region(), bucket());
+            Some(&credentials.access_key_id),
+            Some(&credentials.secret_key),
+            None,
+            Some(&credentials.session_token),
+            None,
+        )
+        .map_err(|e| SyncError::Custom(format!("failed to init credentials {:?}", e)))?;
+
+        let bucket = Bucket::new(bucket(), s3::Region::UsWest2, credentials)
+            .map_err(|e| SyncError::Custom(format!("failed to init bucket {:?}", e)))?;
+
+        // let credentials = Credentials::new(
+        //     credentials.access_key_id.clone(),
+        //     credentials.secret_key.clone(),
+        //     Some(credentials.session_token.clone()),
+        // );
+        // let bucket = Bucket::new(region(), bucket());
 
         let key = self.s3_prefix.clone().unwrap() + &*random_string(12);
 
-        let presign_url = s3_presign::put(&credentials, &bucket, &key, 60 * 10)
-            .ok_or(SyncError::Custom("can not generate presign url".to_owned()))?;
+        // let presign_url = s3_presign::put(&credentials, &bucket, &key, 60 * 10)
+        //     .ok_or(SyncError::Custom("can not generate presign url".to_owned()))?;
 
-        let content = content.to_owned().to_vec();
+        let presign_url = bucket.presign_put(key.clone(), 60 * 10, None).unwrap();
+
+        let content = content.to_vec();
         let content_size = content.len();
 
         // allow 20k/s upload speed
